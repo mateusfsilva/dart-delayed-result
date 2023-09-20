@@ -4,7 +4,7 @@ The `DelayedResult` is a helper class to implement segmented state pattern (idle
 
 Add the `DelayedResult` dependency to your project:
 
-```
+```yaml
   delayed_result:
     git:
       url: https://github.com/ChiliLabs/dart-delayed-result.git
@@ -13,7 +13,7 @@ Add the `DelayedResult` dependency to your project:
 
 You can use it in any suitable way, for example as field in a `flutter_bloc` BLoC state:
 
-```
+```dart
 class HomeState {
 	final DelayedResult<DashboardData> dashboardResult;
 	final DelayedResult<bool> saveResult;
@@ -22,7 +22,7 @@ class HomeState {
 
 And then in your BLoC in an event mapper:
 
-```
+```dart
   void _onGreetingRequested(
     GreetingRequested event,
     Emitter<HomeState> emit,
@@ -54,7 +54,7 @@ And then in your BLoC in an event mapper:
 
 And in your widget `build` method:
 
-```
+```dart
 @override
   Widget build(BuildContext context) {
     return Scaffold(
